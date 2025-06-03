@@ -16,3 +16,7 @@
 2. 安裝 Flask：
    ```bash
    pip install flask
+3. 執行主程式：
+   python shenhuo_old.py
+4.打開瀏覽器輸入：
+   http://127.0.0.1:5000/
