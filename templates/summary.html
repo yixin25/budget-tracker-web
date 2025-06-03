@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ month }} 的支出統計</title>
+</head>
+<body>
+    <h1>{{ month }} 的支出統計</h1>
+
+    <p>總預算：{{ data.budget }}</p>
+    <p>已花費：{{ total_spent }}</p>
+    <p>剩餘預算：{{ remaining }}</p>
+
+    <h2>每日支出明細</h2>
+    {% for date, items in data.expenses.items() %}
+        <h3>{{ date }}</h3>
+        <ul>
+        {% for item in items %}
+            <li>{{ item.category }}：${{ item.amount }}</li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <br><a href="/">回到輸入頁面</a>
+</body>
+</html>
